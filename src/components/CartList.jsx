@@ -42,7 +42,7 @@ const CartList = () => {
             </div>
             <MdShoppingCartCheckout
                 onClick={() => setCartToggle(!cartToggle)}
-                className='font-bold text-green-500 fixed bottom-5 right-5 text-[30px] md:text-[45px] bg-white rounded-md cursor-pointer' />
+                className={`font-bold text-green-500 fixed bottom-5 right-5 text-[30px] md:text-[45px] bg-white rounded-md cursor-pointer ${totalItems > 0 && 'animate-bounce transition-all duration-500'}`} />
         </>
     )
 }
