@@ -2,12 +2,11 @@ import React from 'react'
 import FoodData from '../data/FoodData'
 import FoodAllItem from './FoodAllItem'
 import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
+
 const FoodAllList = () => {
     const category = useSelector((state) => state.category.category);
     const search = useSelector((state) => state.search.search);
     console.log(search)
-    const dispatch = useDispatch();
     return (
         <>
             <div className='bg-[#fdf8f1]'>

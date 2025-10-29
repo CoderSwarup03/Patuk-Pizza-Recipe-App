@@ -33,7 +33,7 @@ const CategoryList = () => {
                             category.map((item) => {
                                 return (
                                     <button
-                                        onClick={() => dispatch(addCategory(item.category))}
+                                        onClick={() => dispatch(addCategory(item))}
                                         key={item.id}
                                         className={`cursor-pointer bg-green-500 hover:bg-green-600 hover:text-white font-semibold px-3 py-1 rounded-md ${addCategorys === item.category &&'bg-green-600 text-white'}`}>
                                         {item}
