@@ -11,17 +11,18 @@ const WeaklyDataItem = ({ item }) => {
             <div className='flex flex-col justify-center items-center gap-5 px-2 py-4 border-2 border-green-500 rounded-lg '>
                 <img src={item.img} alt="" />
                 <h3 className='text-lg  md:text-2xl font-bold hover:text-[#ffa203]'>{item.name}</h3>
-                <span className='text-2xl font-bold text-[#ffa306]'>${item.price}</span>
+                <span className='text-2xl font-bold text-[#ffa306]'>₹{item.price}</span>
                 <div className='flex gap-2 justify-center items-center'>
                     <CiSquareMinus
                         onClick={() => item.qty > 1 ? dispatch(decrementQty({
-                            id: item.id
+                            id: item.id,
                         })) : item.qty = 1}
                         className='text-4xl cursor-pointer hover:bg-gray-200' />
-                    <span>1</span>
+                    <span>{item.qty}</span>
                     <CiSquarePlus
                         onClick={() => dispatch(incrementQty({
-                            id: item.id
+                            id: item.id,
+                            qty: item.qty = 1
                         }))}
                         className='text-4xl cursor-pointer hover:bg-gray-200' />
 

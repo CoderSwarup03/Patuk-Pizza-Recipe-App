@@ -13,7 +13,7 @@ const FoodAllItem = ({ item }) => {
                     <span className='bg-gray-200 px-3 py-1 font-semibold'>{item.category}</span>
                 </div>
                 <div className='flex justify-between p-3'>
-                    <span className='text-lg md:text-2xl font-bold'>${item.price}</span>
+                    <span className='text-lg md:text-2xl font-bold'>₹{item.price}</span>
                     <div className='flex justify-center items-center gap-2'>
                         <AiOutlinePlusSquare className='text-2xl font-bold cursor-pointer' />
                         <span className='text-xl font-semibold'>1</span>

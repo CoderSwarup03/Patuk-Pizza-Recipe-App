@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Category from "../pages/Category";
 
 const CategorySlice =  createSlice({
     name: 'category',

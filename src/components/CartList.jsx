@@ -19,11 +19,14 @@ const CartList = () => {
                         className='text-xl font-bold cursor-pointer' />
                 </div>
                 {/* attached cart item */}
-                {cartItems.map((item) => {
-                    return (
-                        <CartItem key={item.id} item={item} />
-                    )
-                })}
+                <div className='border-2 border-green-500 h-[55vh] md:h-[62vh] mt-3 overflow-y-scroll p-2'>
+                    {cartItems.map((item) => {
+                        return (
+                            <CartItem key={item.id} item={item} />
+                        )
+                    })}
+                </div>
+
                 <div className='absolute border-t-2 border-green-500 bottom-3 w-[90vw] lg:w-[23vw] '>
                     <div className='flex justify-between items-center'>
                         <div className='flex flex-col gap-2 items-center'>
@@ -32,7 +35,7 @@ const CartList = () => {
                         </div>
                         <div className='flex flex-col gap-2 items-center'>
                             <span className='text-xl font-bold'>{totalItems}</span>
-                            <span className='text-xl font-bold'>${totalPrice}</span>
+                            <span className='text-xl font-bold'>₹{totalPrice}</span>
                         </div>
                     </div>
                     <div>

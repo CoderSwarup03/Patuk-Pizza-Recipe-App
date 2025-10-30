@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 const FoodAllList = () => {
     const category = useSelector((state) => state.category.category);
     const search = useSelector((state) => state.search.search);
-    console.log(search)
+    console.log(search);
     return (
         <>
             <div className='bg-[#fdf8f1]'>
@@ -33,7 +33,6 @@ const FoodAllList = () => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

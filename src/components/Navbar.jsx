@@ -3,9 +3,14 @@ import Logo from '../assets/brand-logo.svg'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
+import { useDispatch } from 'react-redux';
+import { setSearch } from '../slice/SearchSlice';
 
 const Navbar = () => {
+
   const [menu, setMenu] = useState(false);
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className='bg-white py-0.5 md:py-3 border-b-2 border-green-500 w-full fixed top-0 z-30'>
@@ -25,9 +30,10 @@ const Navbar = () => {
             <div className='flex justify-center items-center gap-4'>
               <div>
                 <input
+                  onChange={(e) => dispatch(setSearch(e.target.value))}
                   placeholder='Search Fav Pizza...'
                   className='rounded-md outline-none p-2 border-2 border-green-500 text-mg font-semibold text-gray-500'
-                  ype="search" name="" id="" />
+                  type="search" name="" id="" />
               </div>
               <span className="w-[1.5px] h-10 bg-[#ffa307] inline-block pointer"></span>
               <div className='flex flex-col gap-1 justify-start items-start'>
@@ -40,12 +46,13 @@ const Navbar = () => {
           {/* Mobile View */}
           <div className='flex lg:hidden flex-row justify-center items-center gap-3'>
             <input
+              onChange={(e) => dispatch(setSearch(e.target.value))}
               placeholder='Search Fav Pizza...'
               className='rounded-md outline-none p-2 border-2 border-green-500 text-sm font-semibold text-gray-500 w-[70%] md:w-full'
               ype="search" name="" id="" />
-            <GiHamburgerMenu 
-            onClick={()=> setMenu(!menu)}
-            className='text-xl font-bold text-green-500 hover:text-green-600 h-[20vh]' />
+            <GiHamburgerMenu
+              onClick={() => setMenu(!menu)}
+              className='text-xl font-bold text-green-500 hover:text-green-600 h-[20vh]' />
           </div>
           <div
             onClick={() => setMenu()}
@@ -57,9 +64,9 @@ const Navbar = () => {
               <Link to={'/contact'} className='text-gray-500 hover:text-[rgb(255,164,7)] cursor-pointer'>Contact</Link>
             </div>
             <div>
-              <RxCross1 
-              onClick={() => setMenu(!menu)}
-              className='text-2xl font-bold' />
+              <RxCross1
+                onClick={() => setMenu(!menu)}
+                className='text-2xl font-bold' />
             </div>
           </div>
         </div>
