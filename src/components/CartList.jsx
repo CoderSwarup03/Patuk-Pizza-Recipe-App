@@ -20,11 +20,15 @@ const CartList = () => {
                 </div>
                 {/* attached cart item */}
                 <div className='border-2 border-green-500 h-[55vh] md:h-[62vh] mt-3 overflow-y-scroll p-2'>
-                    {cartItems.map((item) => {
-                        return (
-                            <CartItem key={item.id} item={item} />
-                        )
-                    })}
+                    {cartItems.length === 0 ? (
+                        <h1 className='text-center text-sm md:text-xl font-bold text-gray-500'>Cart is empty</h1>
+                    ) : (
+                       cartItems.map((item) => {
+                            return (
+                                <CartItem key={item.id} item={item}/>
+                            )
+                       })
+                    )}
                 </div>
 
                 <div className='absolute border-t-2 border-green-500 bottom-3 w-[90vw] lg:w-[23vw] '>
