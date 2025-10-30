@@ -7,7 +7,6 @@ import { useDispatch } from 'react-redux';
 import { setSearch } from '../slice/SearchSlice';
 
 const Navbar = () => {
-
   const [menu, setMenu] = useState(false);
   const dispatch = useDispatch();
 
@@ -15,9 +14,9 @@ const Navbar = () => {
     <>
       <div className='bg-white py-0.5 md:py-3 border-b-2 border-green-500 w-full fixed top-0 z-30'>
         <div className='flex justify-evenly items-center'>
-          <a href="#">
+          <Link to={'/'}>
             <img src={Logo} alt="logo" className='text-lg md:text-2xl' />
-          </a>
+          </Link>
           <div className='hidden lg:block'>
             <ul className='flex gap-5 justify-center items-center text-xl font-bold'>
               <Link to={'/'} className='text-gray-500 hover:text-[rgb(255,164,7)] hover:underline underline-offset-2 cursor-pointer'>Home</Link>

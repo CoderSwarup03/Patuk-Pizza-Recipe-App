@@ -3,6 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
 import { useDispatch } from 'react-redux';
 import { removeFromCart, incrementQty, decrementQty } from '../slice/CartSlice';
+
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
   return (

@@ -6,7 +6,7 @@ const FoodAllItem = ({ item }) => {
     const dispatch = useDispatch();
     return (
         <>
-            <div className='flex flex-col justify-center gap-1 bg-white p-3'>
+            <div className='flex flex-col justify-center gap-1 bg-white p-3'>  
                 <img src={item.img} alt="" />
                 <div className='flex flex-col md:flex-row justify-between items-center px-1 md:px-3 py-1'>
                     <h2 className='text-sm md:text-xl font-bold'>{item.name}</h2>
@@ -29,7 +29,7 @@ const FoodAllItem = ({ item }) => {
                             category: item.category,
                             title: item.title
                         }))}
-                        className='text-xl font-bold text-white bg-[#ffa203] hover:bg-[#eb9705] px-6 py-1 cursor-pointer rounded-md'>Cart</span>
+                        className='text-sm md:text-xl font-bold text-white bg-[#ffa203] hover:bg-[#eb9705] px-1 md:px-6 py-1 cursor-pointer'>Add To Cart</span>
                 </div>
                 <div className='p-1 md:p-3 rounded-md'>
                     <h3 className='bg-[#ffa203] px-2 md:px-4 py-1 font-semibold text-white text-sm md:text-lg'>{item.offers}</h3>

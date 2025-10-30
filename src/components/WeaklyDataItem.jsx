@@ -1,6 +1,5 @@
 import React from 'react'
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
-import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../slice/CartSlice';
 const WeaklyDataItem = ({ item }) => {
