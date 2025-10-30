@@ -22,7 +22,7 @@ const CategoryList = () => {
 
     return (
         <>
-            <div className=' max-w-[90%] md:max-w-[80%] mx-auto mt-[20vh] md:mt-[15vh] p-3'>
+            <div className='max-w-[90%] md:max-w-[80%] mx-auto mt-[20vh] md:mt-[15vh] p-3'>
                 <div className='flex flex-col gap-2 items-center md:items-start'>
                     <h1 className='text-2xl font-bold'>Find The Best Food!</h1>
                     <div className='flex flex-wrap gap-2'>

@@ -20,10 +20,10 @@ const Navbar = () => {
           </a>
           <div className='hidden lg:block'>
             <ul className='flex gap-5 justify-center items-center text-xl font-bold'>
-              <Link to={'/'} className='text-gray-500 hover:text-[rgb(255,164,7)] cursor-pointer'>Home</Link>
-              <Link to={'/category'} className='text-gray-500 hover:text-[rgb(255,164,7)] cursor-pointer'>Category</Link>
-              <Link to={'/blog'} className='text-gray-500 hover:text-[rgb(255,164,7)] cursor-pointer'>Blog</Link>
-              <Link to={'/contact'} className='text-gray-500 hover:text-[rgb(255,164,7)] cursor-pointer'>Contact</Link>
+              <Link to={'/'} className='text-gray-500 hover:text-[rgb(255,164,7)] hover:underline underline-offset-2 cursor-pointer'>Home</Link>
+              <Link to={'/category'} className='text-gray-500 hover:text-[rgb(255,164,7)] hover:underline underline-offset-2 cursor-pointer'>Category</Link>
+              <Link to={'/blog'} className='text-gray-500 hover:text-[rgb(255,164,7)] hover:underline underline-offset-2 cursor-pointer'>Blog</Link>
+              <Link to={'/contact'} className='text-gray-500 hover:text-[rgb(255,164,7)] hover:underline underline-offset-2 cursor-pointer'>Contact</Link>
             </ul>
           </div>
           <div className='hidden lg:block'>
