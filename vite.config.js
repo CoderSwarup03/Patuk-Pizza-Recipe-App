@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-   theme: {
+  theme: {
     extend: {
       fontFamily: {
-        'my-font': ['MyFont', 'sans-serif'],
+        'body': ['"Ubuntu", "sans-serif"'],
       },
     },
   },
