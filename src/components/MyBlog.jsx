@@ -4,19 +4,22 @@ import Men from '../assets/men.jpg'
 import BlogImg1 from '../assets/blog-img1.jpg'
 import BlogImg2 from '../assets/blog-img2.jpg'
 import { IoIosSearch } from "react-icons/io";
+import { TbSend } from "react-icons/tb";
 import { FaOtter } from 'react-icons/fa'
 import { RiChatSmile3Fill } from "react-icons/ri";
+import { RxCross2 } from "react-icons/rx";
+
 import Footer from './Footer'
 const MyBlog = () => {
-  const [sms, setSms] = useState(false)
+  const [sms, setSms] = useState(true)
   return (
     <>
-      <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[10vh] border-2 border-green-600'>
+      <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[10vh]'>
         <div className='max-w-[90%] md:max-w-[80%] mx-auto p-3 mt-5'>
           <h1 className='text-xl md:text-3xl lg:text-5xl font-bold'>How to make a pizza at home?</h1>
           <div className='flex flex-col lg:flex-row justify-between gap-3 mt-10'>
             {/* for left */}
-            <div className='border-2 border-green-600 w-full lg::w-[70%] bg-white p-3'>
+            <div className='w-full lg::w-[70%] bg-white p-3'>
               <div className=''>
                 <img src={BlogImg} alt='blog-page-image' />
                 <div className='flex gap-2 items-center mt-5'>
@@ -81,7 +84,7 @@ const MyBlog = () => {
             {/* for right */}
             <div className='flex flex-col gap-3  w-full lg:w-[30%] bg-[#fdfbf9] p-3'>
               {/* search section */}
-              <div className='h-[150px] border-2 border-green-500 bg-white hover:shadow-md'>
+              <div className='h-[150px] bg-white hover:shadow-md'>
                 <h1 className='text-xl font-bold p-2'>Search</h1>
                 <div className='flex justify-between items-center border-2 border-[#f4f4f5] m-2'>
                   <input
@@ -93,7 +96,7 @@ const MyBlog = () => {
               </div>
 
               {/* category section */}
-              <div className='h-[50vh] border-2 border-green-500 bg-white hover:shadow-md'>
+              <div className='h-[50vh] bg-white hover:shadow-md'>
                 <h1 className='text-xl font-bold p-2'>Category</h1>
                 <div className='flex flex-col gap-2 items-center m-2'>
                   <div className='bg-[#f8f2e9] hover:bg-[#ffa101] text-gray-500 hover:text-white  m-2 flex justify-between w-full p-2 cursor-pointer transition-all duration-500'>
@@ -116,7 +119,7 @@ const MyBlog = () => {
               </div>
               {/* tags section */}
 
-              <div className='h-inherit border-2 border-green-500 bg-white hover:shadow-md'>
+              <div className='h-inherit bg-white hover:shadow-md'>
                 <h1 className='text-xl font-bold p-2'>Tags</h1>
                 <div className='flex flex-col flex-wrap gap-2 items-center m-2'>
                   <div className='flex flex-wrap gap-2 items-center'>
@@ -135,9 +138,80 @@ const MyBlog = () => {
           </div>
         </div>
       </div>
-      
-      <div className='absolute bottom-4 right-4 fixed text-5xl font-bold text-green-500 hover:text-green-600 cursor-pointer'>
-        <RiChatSmile3Fill />
+
+      {/*for chatbot */}
+      <div className={`p-2 top-32 right-2 flex flex-col justify-center items-center fixed z-50 ${sms ? 'hidden' : 'block'}`}>
+        <div className="bg-white rounded-lg shadow-lg w-[70%] md:w-full max-w-md overflow-hidden flex flex-col h-[450px] md:h-[600px]">
+          {/* Header */}
+          <div className="bg-blue-600 text-white px-3 py-1 ">
+            <i data-lucide="bot" className="mr-2 w-6 h-6" />
+            <div className='flex justify-between items-center'>
+              <div>
+                <h1 className="font-bold text-lg">Simple Chatbot</h1>
+                <p className="text-xs text-blue-100">Online</p>
+              </div>
+              <div>
+                <RxCross2
+                  onClick={() => setSms(!sms)}
+                  className='text-2xl font-semibold cursor-pointer' />
+              </div>
+            </div>
+          </div>
+          {/* Messages Container */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {/* Pesan Bot Pertama (Statis) */}
+            <div className="flex justify-start">
+              <div className="max-w-[80%] rounded-lg p-3 bg-gray-200 text-gray-800 rounded-bl-none">
+                <div className="flex items-center mb-1">
+                  <i data-lucide="bot" className="mr-1 w-4 h-4" />
+                  <span className="text-xs font-medium">Chatbot</span>
+                  <span className="text-xs ml-2 opacity-75">10:00</span>
+                </div>
+                <p>Hello! I'm your friendly chatbot. How can I help you today?</p>
+              </div>
+            </div>
+            {/* Contoh Pesan User (Statis) */}
+            <div className="flex justify-end">
+              <div className="max-w-[80%] rounded-lg p-3 bg-blue-600 text-white rounded-br-none">
+                <div className="flex items-center mb-1">
+                  <i data-lucide="user" className="mr-1 w-4 h-4" />
+                  <span className="text-xs font-medium">You</span>
+                  <span className="text-xs ml-2 opacity-75">10:01</span>
+                </div>
+                <p>Hi! Can you tell me more about this?</p>
+              </div>
+            </div>
+            {/* Contoh Pesan Bot Kedua (Statis) */}
+            <div className="flex justify-start">
+              <div className="max-w-[80%] rounded-lg p-3 bg-gray-200 text-gray-800 rounded-bl-none">
+                <div className="flex items-center mb-1">
+                  <i data-lucide="bot" className="mr-1 w-4 h-4" />
+                  <span className="text-xs font-medium">Chatbot</span>
+                  <span className="text-xs ml-2 opacity-75">10:02</span>
+                </div>
+                <p>I'm here to help! What would you like to know?</p>
+              </div>
+            </div>
+          </div>
+          {/* Input Area */}
+          <div className="border-t border-gray-200 p-4 flex items-center">
+            <input
+              type="text"
+              placeholder="Type your message here..."
+              className="flex-1 border border-gray-300 rounded-l-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 w-[100px] md:w-full"
+            />
+            <button className="bg-blue-600 text-white p-2 rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <TbSend />
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div className='bottom-4 right-4 fixed text-5xl font-bold text-green-500 hover:text-green-600 cursor-pointer'>
+        <RiChatSmile3Fill
+          onClick={() => setSms(!sms)}
+        />
       </div>
       <Footer />
     </>

@@ -6,7 +6,7 @@ const FoodAllItem = ({ item }) => {
     const dispatch = useDispatch();
     return (
         <>
-            <div className='flex flex-col justify-center gap-1 bg-white p-3'>  
+            <div className='flex flex-col justify-center gap-1 bg-white p-3 hover:shadow-lg mb-4'>  
                 <img src={item.img} alt="" />
                 <div className='flex flex-col md:flex-row justify-between items-center px-1 md:px-3 py-1'>
                     <h2 className='text-sm md:text-xl font-bold'>{item.name}</h2>

@@ -6,7 +6,7 @@ const WeaklyDataItem = ({ item }) => {
     const dispatch = useDispatch();
     return (
         <>
-            <div className='flex flex-col justify-center items-center gap-5 px-2 py-4 border-2 border-green-500 rounded-lg '>
+            <div className='flex flex-col justify-center items-center gap-5 px-2 py-4 border-2 border-green-500 rounded-lg hover:shadow-md'>
                 <img src={item.img} alt="" />
                 <h3 className='text-lg  md:text-2xl font-bold hover:text-[#ffa203]'>{item.name}</h3>
                 <span className='text-2xl font-bold text-[#ffa306]'>₹{item.price}</span>

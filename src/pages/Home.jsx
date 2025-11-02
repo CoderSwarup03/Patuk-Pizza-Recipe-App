@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import WeaklyOffer from '../components/WeaklyOffer'
 import FoodAllList from '../components/FoodAllList'
 import CartList from '../components/CartList'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <WeaklyOffer />
       <FoodAllList />
       <CartList />
+      <Footer />
     </>
 
   )
