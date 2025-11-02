@@ -47,40 +47,82 @@ const MyBlog = () => {
                     Assets named receive make continued would appearance, this he there understand were the passion her by in our such, yourself big didn't best pointing necessary it he bed throughout. It why than raised as of for and founding not on bad the first me refinement is it day of go. Duck the seal to lively. Publication at the of accustomed. Self-interest, duck thousand canvassing are them.
                   </p>
                 </div>
+
+                <div className='flex flex-col gap-3'>
+                  <h3 className='text-xl font-bold'>Leave a comment</h3>
+                  <form className='flex  flex-wrap items-center gap-2'>
+                    <div className='flex w-full gap-2'>
+                      <input
+                        placeholder='Name'
+                        className='border-2 border-[#777a80] hover:border-[#ffa101] outline-none p-3 w-[50%] text-lg font-semibold'
+                        type="text" />
+                      <input
+                        placeholder='Email'
+                        className='border-2 border-[#777a80] hover:border-[#ffa101] outline-none p-3 w-[50%] text-lg font-semibold'
+                        type="email" />
+                    </div>
+                    <input
+                      placeholder='Website'
+                      className='border-2 border-[#777a80] hover:border-[#ffa101] outline-none p-3 w-full text-lg font-semibold'
+                      type="text" />
+                    <textarea
+                      placeholder='Your Commenets'
+                      className='w-full h-[150px] outline-none border-2 border-[#777a80] hover:border-[#ffa101] p-3 text-lg font-semibold'
+                      name="" id=""></textarea>
+                    <button className='text-md font-bold uppercase bg-[#ffa101] hover:bg-[#d28909] cursor-pointer text-white px-3 py-1'>Add Comment</button>
+                  </form>
+                </div>
               </div>
             </div>
             {/* for right */}
-            <div className='flex flex-col gap-3 border-2 border-green-600 w-full lg:w-[30%] bg-[#fdfbf9] p-3'>
+            <div className='flex flex-col gap-3  w-full lg:w-[30%] bg-[#fdfbf9] p-3'>
               {/* search section */}
               <div className='h-[150px] border-2 border-green-500 bg-white hover:shadow-md'>
                 <h1 className='text-xl font-bold p-2'>Search</h1>
                 <div className='flex justify-between items-center border-2 border-[#f4f4f5] m-2'>
                   <input
                     placeholder='Search here...'
-                    className='text-lg font-semibold outline-none p-2'
+                    className='text-sm md:text-lg font-semibold outline-none p-2'
                     type="search" name="" id="" />
                   <IoIosSearch className='text-2xl font-bold text-[#d7d7db]' />
                 </div>
               </div>
+
               {/* category section */}
-              <div className='h-full border-2 border-green-500 bg-white hover:shadow-md'>
+              <div className='h-[50vh] border-2 border-green-500 bg-white hover:shadow-md'>
                 <h1 className='text-xl font-bold p-2'>Category</h1>
-                <div className='flex flex-col gap-3 items-center m-2'>
-                  <div className='bg-[#f8f2e9] hover:bg-[#ffa101]  m-2 flex justify-between w-full p-2 cursor-pointer'>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>Restrurant Ideas</span>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>12</span>
+                <div className='flex flex-col gap-2 items-center m-2'>
+                  <div className='bg-[#f8f2e9] hover:bg-[#ffa101] text-gray-500 hover:text-white  m-2 flex justify-between w-full p-2 cursor-pointer transition-all duration-500'>
+                    <span className='text-md font-semibold'>Restrurant Ideas</span>
+                    <span className='text-md font-semibold'>12</span>
                   </div>
-                   <div className='bg-[#f8f2e9] hover:bg-[#ffa101]  m-2 flex justify-between w-full p-2 cursor-pointer'>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>Restrurant Ideas</span>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>12</span>
+                  <div className='bg-[#f8f2e9] hover:bg-[#ffa101] text-gray-500 hover:text-white m-2 flex justify-between w-full p-2 cursor-pointer transition-all duration-500'>
+                    <span className='text-md font-semibold '>Pizza Festival</span>
+                    <span className='text-md font-semibold '>12</span>
                   </div>
-                   <div className='bg-[#f8f2e9] hover:bg-[#ffa101]  m-2 flex justify-between w-full p-2 cursor-pointer'>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>Restrurant Ideas</span>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>12</span>
+                  <div className='bg-[#f8f2e9] hover:bg-[#ffa101] text-gray-500 hover:text-white m-2 flex justify-between w-full p-2 cursor-pointer transition-all duration-500'>
+                    <span className='text-md font-semibold '>Food Festival</span>
+                    <span className='text-md font-semibold '>12</span>
                   </div>
-                   <div className='bg-[#f8f2e9] hover:bg-[#ffa101]  m-2 flex justify-between w-full p-2 cursor-pointer'>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>Restrurant Ideas</span>
-                    <span className='text-md font-semibold text-gray-500 hover:text-white'>12</span>
+                  <div className='bg-[#f8f2e9] hover:bg-[#ffa101] text-gray-500 hover:text-white m-2 flex justify-between w-full p-2 cursor-pointer transition-all duration-500'>
+                    <span className='text-md font-semibold '>Burger</span>
+                    <span className='text-md font-semibold '>12</span>
+                  </div>
+                </div>
+              </div>
+              {/* tags section */}
+
+              <div className='h-inherit border-2 border-green-500 bg-white hover:shadow-md'>
+                <h1 className='text-xl font-bold p-2'>Tags</h1>
+                <div className='flex flex-col flex-wrap gap-2 items-center m-2'>
+                  <div className='flex flex-wrap gap-2 items-center'>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Paid Marketing</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Pizza</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Digital Marketing</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Covid</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Web Deesign</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Themeix</span>
+                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Content Marketing</span>
                   </div>
                 </div>
               </div>
