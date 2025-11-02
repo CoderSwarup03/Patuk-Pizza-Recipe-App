@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BlogImg from '../assets/single-image.jpg'
 import Men from '../assets/men.jpg'
 import BlogImg1 from '../assets/blog-img1.jpg'
 import BlogImg2 from '../assets/blog-img2.jpg'
 import { IoIosSearch } from "react-icons/io";
+import { FaOtter } from 'react-icons/fa'
+import { RiChatSmile3Fill } from "react-icons/ri";
+import Footer from './Footer'
 const MyBlog = () => {
+  const [sms, setSms] = useState(false)
   return (
     <>
       <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[10vh] border-2 border-green-600'>
@@ -131,6 +135,11 @@ const MyBlog = () => {
           </div>
         </div>
       </div>
+      
+      <div className='absolute bottom-4 right-4 fixed text-5xl font-bold text-green-500 hover:text-green-600 cursor-pointer'>
+        <RiChatSmile3Fill />
+      </div>
+      <Footer />
     </>
   )
 }
