@@ -14,7 +14,7 @@ const MyBlog = () => {
   const [sms, setSms] = useState(true)
   return (
     <>
-      <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[10vh]'>
+      <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[18vh]'>
         <div className='max-w-[90%] md:max-w-[80%] mx-auto p-3 mt-5'>
           <h1 className='text-xl md:text-3xl lg:text-5xl font-bold'>How to make a pizza at home?</h1>
           <div className='flex flex-col lg:flex-row justify-between gap-3 mt-10'>
@@ -123,13 +123,13 @@ const MyBlog = () => {
                 <h1 className='text-xl font-bold p-2'>Tags</h1>
                 <div className='flex flex-col flex-wrap gap-2 items-center m-2'>
                   <div className='flex flex-wrap gap-2 items-center'>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Paid Marketing</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Pizza</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Digital Marketing</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Covid</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Web Deesign</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Themeix</span>
-                    <span className='p-2 border-2 border-green-600 hover:text-green-600 text-semibold cursor-pointer text-gray-600 '>Content Marketing</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Paid Marketing</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Pizza</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Digital Marketing</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Covid</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Web Deesign</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Themeix</span>
+                    <span className='p-2 bg-[#f8f2e9] text-semibold cursor-pointer text-gray-600 '>Content Marketing</span>
                   </div>
                 </div>
               </div>
