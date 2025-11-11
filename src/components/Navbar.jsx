@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className='bg-white py-0.5 md:py-3 border-b-2 border-green-500 w-full fixed top-0 z-30'>
         <div className='flex justify-evenly items-center'>
           <Link to={'/'}>
-            <img src={Logo} alt="logo" className='text-lg md:text-2xl h-[100px] w-[120px] md:h-[100px] md:w-[170px]' />
+            <img src={Logo} alt="logo" className='flex items-center text-lg md:text-2xl h-[50px] w-[120px] md:h-[50px] md:w-[170px]' />
           </Link>
           <div className='hidden lg:block'>
             <ul className='flex gap-5 justify-center items-center text-xl font-bold'>
@@ -51,7 +51,7 @@ const Navbar = () => {
               ype="search" name="" id="" /> */}
             <GiHamburgerMenu
               onClick={() => setMenu(!menu)}
-              className='text-xl font-bold text-green-500 hover:text-green-600 h-[20vh]' />
+              className='flex items-center text-xl font-bold text-green-500 hover:text-green-600 h-[50px]' />
           </div>
           <div
             onClick={() => setMenu()}

@@ -8,17 +8,19 @@ import { TbSend } from "react-icons/tb";
 import { FaOtter } from 'react-icons/fa'
 import { RiChatSmile3Fill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import FoodDataa from '../data/FoodDataa'
 
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 const MyBlog = () => {
   const [sms, setSms] = useState(true)
   return (
     <>
-      <div className='bg-[#fdfbf9] mt-[20vh] md:mt-[18vh]'>
+      <div className='bg-[#fdfbf9] mt-[5vh] md:mt-[10vh] py-[5vh]'>
         <div className='max-w-[90%] md:max-w-[80%] mx-auto p-3 mt-5'>
-          <h1 className='text-xl md:text-3xl lg:text-5xl font-bold'>How to make a pizza at home?</h1>
+          <h1 className='text-xl md:text-3xl lg:text-5xl font-bold p-3'>How to make a pizza at home?</h1>
           <div className='flex flex-col lg:flex-row justify-between gap-3 mt-10'>
-            {/* for left */}
+            {/* for left side*/}
             <div className='w-full lg::w-[70%] bg-white p-3'>
               <div className=''>
                 <img src={BlogImg} alt='blog-page-image' />
@@ -81,7 +83,7 @@ const MyBlog = () => {
                 </div>
               </div>
             </div>
-            {/* for right */}
+            {/* for righ side*/}
             <div className='flex flex-col gap-3  w-full lg:w-[30%] bg-[#fdfbf9] p-3'>
               {/* search section */}
               <div className='h-[150px] bg-white hover:shadow-md'>
@@ -134,6 +136,18 @@ const MyBlog = () => {
                 </div>
               </div>
 
+              {/* blog details dection */}
+              <div className='h-inherit flex flex-col items-center py-2'>
+                {FoodDataa.map((item) => {
+                  return (
+                    <div className='flex flex-col gap-5 border border-green-500 px-3 py-2 my-2'>
+                      <img src={item.img} alt={item.name} className='w-[200px]' />
+                      <h4 className='text-center text-xl font-bold'>{item.name}</h4>
+                      <Link to={`/blog/${item.id}`} className='text-center w-full bg-[#ffa101] px-3 py-2 rounded-4xl font-bold text-white cursor-pointer'>Details</Link>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>
