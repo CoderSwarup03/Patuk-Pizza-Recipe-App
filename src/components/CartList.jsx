@@ -3,12 +3,14 @@ import { RxCross1 } from "react-icons/rx";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const CartList = () => {
     const [cartToggle, setCartToggle] = useState(true);
     const cartItems = useSelector((state) => state.cart.cart);
     const totalItems = cartItems.reduce((acc, item) => acc + item.qty, 0);
     const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
+    const navigate = useNavigate();
     return (
         <>
             <div className={`w-full lg:w-[25%] bg-white border-2 border-green-500 rounded-sm top-[8vh] md:top-[11vh] right-0 fixed h-[90vh] p-3 mb-[25px] z-50 ${cartToggle ? 'hidden' : 'block'}`}>
@@ -23,27 +25,29 @@ const CartList = () => {
                     {cartItems.length === 0 ? (
                         <h1 className='text-center text-sm md:text-xl font-bold text-gray-500'>Cart is empty</h1>
                     ) : (
-                       cartItems.map((item) => {
+                        cartItems.map((item) => {
                             return (
-                                <CartItem key={item.id} item={item}/>
+                                <CartItem key={item.id} item={item} />
                             )
-                       })
+                        })
                     )}
                 </div>
 
                 <div className='absolute border-t-2 border-green-500 bottom-3 w-[90vw] lg:w-[23vw] '>
                     <div className='flex justify-between items-center'>
                         <div className='flex flex-col gap-2 items-center'>
-                            <span className='text-xl font-bold'>Item</span>
-                            <span className='text-xl font-bold'>Total</span>
+                            <span className='text-md md:text-xl font-bold'>Item</span>
+                            <span className='text-md md:text-xl font-bold'>Total</span>
                         </div>
                         <div className='flex flex-col gap-2 items-center'>
-                            <span className='text-xl font-bold'>{totalItems}</span>
-                            <span className='text-xl font-bold'>₹{totalPrice}</span>
+                            <span className='text-md md:text-xl font-bold'>{totalItems}</span>
+                            <span className='text-md md:text-xl font-bold'>₹{totalPrice}</span>
                         </div>
                     </div>
                     <div>
-                        <button className='w-full bg-green-500 hover:bg-green-600 cursor-pointer text-white py-2 text-lg md:text-xl font-bold'>Place Order</button>
+                        <button
+                            onClick={() => navigate('/order')}
+                            className='w-full bg-green-500 hover:bg-green-600 cursor-pointer text-white py-2 text-md md:text-xl font-bold rounded-lg'>Place Order</button>
                     </div>
                 </div>
             </div>

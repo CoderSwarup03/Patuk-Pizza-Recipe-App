@@ -6,7 +6,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 
 const Hero = () => {
   return (
-    <div className='bg-[#fdf8f1] h-[90vh] mt-[150px] md:mt-[82px]'>
+    <div className='bg-[#fdf8f1] h-[90vh] mt-[65px] md:mt-[82px] py-[8vh] mb-[25px]'>
       <div className='max-w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center gap-[25px]'>
         <div className='flex flex-col gap-2 items-center md:items-start mt-5'>
           <div className='flex justify-center items-center gap-3 bg-[#fcdca1] px-3 py-1 w-[220px] md:w-[400px]'>

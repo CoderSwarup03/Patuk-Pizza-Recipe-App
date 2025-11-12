@@ -64,8 +64,7 @@ const Footer = () => {
                                         <span className='text-sm md:text-lg font-semibold text-[#6b6f76]'>Friday: Closed</span>
                                     </div>
                                 </div>
-                                <div></div>
-                                <div></div>
+                    
                             </div>
                         </div>
                     </div>
