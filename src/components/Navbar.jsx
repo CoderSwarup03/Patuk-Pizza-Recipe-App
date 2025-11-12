@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <div className='bg-white py-0.5 md:py-3 border-b-2 border-green-500 w-full fixed top-0 z-30'>
-        <div className='flex justify-evenly items-center'>
+        <div className='flex justify-evenly items-center gap-[30px]'>
           <Link to={'/'}>
             <img src={Logo} alt="logo" className='flex items-center text-lg md:text-2xl h-[50px] w-[120px] md:h-[50px] md:w-[170px]' />
           </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
               ype="search" name="" id="" /> */}
             <GiHamburgerMenu
               onClick={() => setMenu(!menu)}
-              className='flex items-center text-xl font-bold text-green-500 hover:text-green-600 h-[50px]' />
+              className='flex items-center text-2xl font-bold text-green-500 hover:text-green-600 h-[60px]' />
           </div>
           <div
             onClick={() => setMenu()}
