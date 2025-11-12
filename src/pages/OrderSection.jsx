@@ -9,6 +9,9 @@ const OrderSection = () => {
         setTimeout(() => {
             setLoading(false)
         }, 2000);
+        setTimeout(() => {
+            navigate('/')
+        }, 3500);
     }, [])
 
     return (
